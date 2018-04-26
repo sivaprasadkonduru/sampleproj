@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome To Django</title>
+</head>
+<body>
+    <h1 align="center">Welcome to Student Website</h1>
+    {% if std_data %}
+    <table align="center" style="width:50%" border="1px solid black;">
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Std</th>
+            <th>Section</th>
+            <th>Address</th>
+        </tr>
+        {% for i in std_data %}
+
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.std}}</td>
+                <td>{{i.section}}</td>
+                <td>{{i.address}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    {% endif %}
+</body>
+</html>
